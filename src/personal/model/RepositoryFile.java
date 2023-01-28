@@ -20,7 +20,32 @@ public class RepositoryFile implements Repository {
         }
         return users;
     }
-
+    @Override
+    public void UpdateUser(User user, Fields field, String param) {
+        if(field == Fields.FIO) {
+            user.setLastName(param);
+        }
+        else if(field == Fields.NAME) {
+            user.setFirstName(param);
+        }
+        else if(field == Fields.TELEPHONE) {
+            user.setPhone(param);
+        }
+        saveUser(user);
+    }
+    private void saveUser(User user) {
+        List<String> lines = new ArrayList<>();
+        List<User> users = getAllUsers();
+        for (User item: users) {
+            if(user.getId().equals(item.getId())) {
+                lines.add(mapper.map(user));
+            }
+            else {
+                lines.add(mapper.map(item));
+            }
+        }
+        fileOperation.saveAllLines(lines);
+    }
     @Override
     public String CreateUser(User user) {
 
