@@ -68,4 +68,16 @@ public class RepositoryFile implements Repository {
         fileOperation.saveAllLines(lines);
         return id;
     }
+
+    @Override
+    public void DeleteUserId(String user_id) {
+        List<String> lines = new ArrayList<>();
+        List<User> users = getAllUsers();
+        for (User item: users) {
+            if(!item.getId().equals(user_id)) {
+                lines.add(mapper.map(item));
+            }
+        }
+        fileOperation.saveAllLines(lines);
+    }
 }

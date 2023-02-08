@@ -19,6 +19,10 @@ public class UserController {
         validate.checkNumber(user.getPhone());
         repository.CreateUser(user);
     }
+    public void deleteUser(String user_id) throws Exception {
+        repository.DeleteUserId(user_id);
+        throw new Exception("User not found");
+    }
     public void updateUser(User user, Fields field, String param) throws Exception {
         if(field == Fields.TELEPHONE) {
             validate.checkNumber(param);

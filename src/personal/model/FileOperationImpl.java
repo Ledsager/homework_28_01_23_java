@@ -52,6 +52,7 @@ public class FileOperationImpl implements FileOperation {
                 // запись всей строки
                 writer.write(line);
                 // запись по символам
+//                writer.append('\n');
                 writer.append('\n');
             }
             writer.flush();

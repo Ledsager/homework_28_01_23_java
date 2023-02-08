@@ -39,6 +39,9 @@ public class ViewUser {
                     case LIST:
                         list();
                         break;
+                    case DELETE:
+                        deleteUserId();
+                        break;
                     case HELP:
                         showHelp();
                 }
@@ -48,6 +51,13 @@ public class ViewUser {
             }
         }
     }
+
+    private void deleteUserId() throws Exception{
+        String id = prompt("Идентификатор пользователя: ");
+//        String user_id = userController.readUser(id);
+        userController.deleteUser(id);
+    }
+
     private void read() throws Exception {
         String id = prompt("Идентификатор пользователя: ");
         User user_ = userController.readUser(id);
