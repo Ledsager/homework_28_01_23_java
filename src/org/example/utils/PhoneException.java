@@ -1,4 +1,4 @@
-package personal.utils;
+package org.example.utils;
 
 public class PhoneException extends Exception {
     public PhoneException(String msg) {

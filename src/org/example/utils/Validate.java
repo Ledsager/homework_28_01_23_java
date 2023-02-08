@@ -1,4 +1,4 @@
-package personal.utils;
+package org.example.utils;
 
 public class Validate {
 
@@ -6,8 +6,8 @@ public class Validate {
         if(!telephone.substring(0,1).equals("+")) {
             throw new PhoneException("Ошибка телефон начинается с плюсика");
         }
-        else if(telephone.length() != 12) {
-            throw new PhoneException("Длина телефона должна быть 11");
+        else if(telephone.length() != 6) {
+            throw new PhoneException("Длина телефона должна быть 5");
         }
     }
 }

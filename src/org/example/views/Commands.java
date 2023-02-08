@@ -1,4 +1,4 @@
-package personal.views;
+package org.example.views;
 
 public enum Commands {
     NONE,

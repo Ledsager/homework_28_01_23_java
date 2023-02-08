@@ -1,9 +1,9 @@
-package personal.controllers;
+package org.example.controllers;
 
-import personal.model.Fields;
-import personal.model.Repository;
-import personal.model.User;
-import personal.utils.Validate;
+import org.example.model.Fields;
+import org.example.model.Repository;
+import org.example.model.User;
+import org.example.utils.Validate;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class UserController {
     }
     public void deleteUser(String user_id) throws Exception {
         repository.DeleteUserId(user_id);
-        throw new Exception("User not found");
+
     }
     public void updateUser(User user, Fields field, String param) throws Exception {
         if(field == Fields.TELEPHONE) {

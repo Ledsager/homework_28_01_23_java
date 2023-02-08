@@ -1,4 +1,4 @@
-package personal.model;
+package org.example.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +44,7 @@ public class RepositoryFile implements Repository {
                 lines.add(mapper.map(item));
             }
         }
+        System.out.println(lines);
         fileOperation.saveAllLines(lines);
     }
     @Override

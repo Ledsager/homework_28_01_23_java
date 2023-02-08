@@ -1,10 +1,10 @@
-package personal.views;
+package org.example.views;
 
-import personal.controllers.UserController;
-import personal.model.Fields;
-import personal.model.User;
-import personal.utils.PhoneException;
-import personal.utils.Validate;
+import org.example.utils.Validate;
+import org.example.controllers.UserController;
+import org.example.model.Fields;
+import org.example.model.User;
+import org.example.utils.PhoneException;
 
 import java.util.Scanner;
 

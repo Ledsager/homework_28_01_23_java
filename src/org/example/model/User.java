@@ -1,4 +1,4 @@
-package personal.model;
+package org.example.model;
 
 public class User {
     private String id = "";

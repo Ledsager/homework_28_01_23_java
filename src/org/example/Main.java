@@ -1,12 +1,12 @@
-package personal;
+package org.example;
 
-import personal.controllers.UserController;
-import personal.model.FileOperation;
-import personal.model.FileOperationImpl;
-import personal.model.Repository;
-import personal.model.RepositoryFile;
-import personal.utils.Validate;
-import personal.views.ViewUser;
+import org.example.controllers.UserController;
+import org.example.model.FileOperation;
+import org.example.model.FileOperationImpl;
+import org.example.model.Repository;
+import org.example.model.RepositoryFile;
+import org.example.utils.Validate;
+import org.example.views.ViewUser;
 
 public class Main {
 
